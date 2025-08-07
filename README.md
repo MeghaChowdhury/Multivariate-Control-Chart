@@ -31,7 +31,7 @@ This project shows how multivariate charts can:
 | File/Folder | Description |
 |-------------|-------------|
 | `Multivariate_Control_Chart__Megha.pdf` | Full research paper (theory + implementation) |
-| `Presentation_Multivariate_Control_Charts_Megha.pdf` | 15-minute Beamer-style slide deck |
+| `Presentation_Multivariate_Control_Charts_Megha.pdf` | Beamer-style slide deck |
 | `code/` or `.R` scripts | All R code for simulation, analysis, and visualization |
 
 ## Techniques Covered
