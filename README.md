@@ -1,142 +1,140 @@
-# Multivariate-Control-Chart
-Multivariate quality control refers to the statistical techniques used to monitor and control  processes involving multiple interrelated quality characteristics. These techniques are  essential in situations where variables are correlated and cannot be adequately assessed  using individual univariate tools. 
-
-#  Multivariate Control Charts in R
-
-This project explores **Multivariate Statistical Process Control (MSPC)** using R, highlighting techniques like **Hotelling’s T² chart** and **Multivariate EWMA (MEWMA)** to monitor processes involving correlated quality variables.
-
->  Course Project: Statistical Quality Control  
->  Summer 2025 |  By: Megha Chowdhury
+Absolutely! Here's a **clean and simple version** of your `README.md` that you can **copy-paste directly** into GitHub. I've removed all icons/emojis and kept formatting professional and easy to read:
 
 ---
 
-##  Why This Project?
+```markdown
+# Multivariate Control Charts in R
 
-In real-world manufacturing and service processes, multiple quality characteristics often behave **together**, not in isolation.
+Multivariate quality control refers to statistical techniques for monitoring and controlling processes involving multiple interrelated quality characteristics. These methods are essential when variables are correlated and cannot be effectively assessed using traditional univariate tools.
 
-Traditional univariate control charts (like X̄-bar charts) can **miss joint shifts** or give **false alarms**. This project shows how **multivariate charts** can:
+## Project Overview
 
- Detect subtle, joint shifts in multiple variables  
- Monitor both large and small changes  
- Avoid misleading interpretations
+This project explores Multivariate Statistical Process Control (MSPC) using R. It focuses on techniques such as Hotelling’s T² control chart and the Multivariate EWMA (MEWMA) chart to monitor processes with correlated quality variables.
 
----
+Course Project – Statistical Quality Control  
+Summer 2025  
+Author: Megha Chowdhury
 
-##  What’s Inside?
+## Why Multivariate Control Charts?
 
-| Section | Description |
-|--------|-------------|
-|  `Multivariate_Control_Chart__Megha.pdf` | Full research report (theory + implementation) |
-|  `Presentation_Multivariate_Control_Charts_Megha.pdf` | 15-minute beamer-style slide deck |
-|  `code/` or `.R` script | All R code for simulation, analysis & visualization |
+In real-world manufacturing and service environments, quality characteristics often move together — not independently.
 
----
+Traditional tools like X̄-bar charts can:
+- Miss joint shifts  
+- Give false alarms  
+- Ignore correlations
 
-## 🔧 Techniques Covered
+This project shows how multivariate charts can:
+- Detect subtle, joint shifts in multiple variables  
+- Monitor both large and small changes  
+- Avoid misleading interpretations
 
-###  1. **Hotelling’s T² Control Chart**
-- Monitors **mean vector** of multivariate processes.
-- Sensitive to large shifts.
-- Applied on the `Ryan92` dataset (Phase I and Phase II).
-- Outlier detection and data cleaning demonstrated.
+## Project Structure
 
-###  2. **MEWMA Chart**
-- Detects **small or gradual shifts** better than T².
-- Tracks weighted history of data.
-- Includes side-by-side comparison with Hotelling’s T².
+| File/Folder | Description |
+|-------------|-------------|
+| `Multivariate_Control_Chart__Megha.pdf` | Full research paper (theory + implementation) |
+| `Presentation_Multivariate_Control_Charts_Megha.pdf` | 15-minute Beamer-style slide deck |
+| `code/` or `.R` scripts | All R code for simulation, analysis, and visualization |
 
-###  3. **Control Ellipses**
-- Visualizes 2D control regions.
-- Used to show differences between independent and correlated variables.
+## Techniques Covered
 
----
+### 1. Hotelling’s T² Control Chart
+- Monitors the mean vector of a multivariate process
+- Sensitive to large shifts
+- Applied to the Ryan92 dataset (Phase I & II)
+- Includes outlier detection and data cleaning
 
-## 📦 R Packages Used
+### 2. Multivariate EWMA (MEWMA) Chart
+- More sensitive to small or gradual shifts
+- Uses exponential smoothing over time
+- Compared side-by-side with T² results
+
+### 3. Control Ellipses
+- Visualize 2D control regions
+- Highlights how variable correlations affect out-of-control detection
+
+## R Packages Used
 
 | Package | Purpose |
-|--------|---------|
+|---------|---------|
 | `mvtnorm` | Simulate multivariate normal data |
-| `qcc` | Construct T² and univariate X̄-bar charts |
+| `qcc` | Construct T² and X̄ control charts |
 | `ellipse` | Draw control region ellipses |
-| `Hotelling` | Classical multivariate tests |
-| `MASS` | MEWMA simulation |
-| `IAcsSPCR` | Real datasets for Phase II analysis |
+| `Hotelling` | Perform multivariate hypothesis tests |
+| `MASS` | Generate MEWMA-style simulations |
+| `IAcsSPCR` | Access real datasets for Phase II testing |
 
----
+## Datasets
 
-##  Datasets
+- **Ryan92**: A well-known dataset from Montgomery's book, used for Phase I–II process analysis
+- **Simulated Phase II Data**: Generated using multivariate normal distribution to mimic small shifts for MEWMA testing
 
-- **Ryan92**: Classical example from Montgomery's SQC book.
-- **Simulated Phase II data**: Created using multivariate normal distribution to illustrate control in practice.
+## Example Outputs
 
----
+### Detecting Hidden Shifts
+- X̄ chart flagged only X2
+- Hotelling’s T² detected points 10 and 20 as out-of-control
+- After data cleaning, only subgroup 6 remained problematic
 
-##  Example Output
+### MEWMA's Strength
+- T² missed a small mean shift introduced after point 15
+- MEWMA detected it immediately by crossing the UCL of 9.21
+- Ideal for real-time Phase II monitoring
 
-###  Detecting Missed Shifts
+## How to Use
 
-> 🔹 Univariate chart showed X2 out of control  
-> 🔹 Hotelling’s T² revealed points 10 & 20 were also problematic  
-> 🔹 After cleaning, only subgroup 6 was flagged → cleaner model
+1. Clone this repository:
+```
 
-###  MEWMA Advantage
+git clone [https://github.com/your-username/Multivariate-Control-Chart.git](https://github.com/your-username/Multivariate-Control-Chart.git)
 
-> 🔹 After a small mean shift, T² missed the change  
-> 🔹 MEWMA detected it quickly → useful for real-time Phase II control
+````
 
----
-
-## 🗂 How to Use
-
-To run the project:
-
-1. Clone the repo
 2. Open the `.R` script in RStudio
+
 3. Install required packages:
 ```r
 install.packages(c("mvtnorm", "qcc", "ellipse", "MASS", "Hotelling", "IAcsSPCR"))
+````
 
-4. Run the script block-by-block to generate charts and observe results.
+4. Run the script block-by-block to simulate and visualize the charts
 
----
+## Key Takeaways
 
-## 🎯 Takeaways
+Multivariate control charts are crucial for detecting:
 
-This project demonstrates the power of **multivariate quality control** in:
+* Hidden variable interactions
+* Joint distribution shifts
+* Early warning signals in complex systems
 
- Identifying hidden correlations  
- Preventing false alarms  
- Detecting subtle but important process shifts
+Hotelling’s T² is best for large shifts.
+MEWMA excels at detecting small drifts over time.
 
-It reinforces how essential **Hotelling's T²** and **MEWMA** charts are for industries like electronics, pharmaceuticals, and manufacturing where multiple quality variables matter simultaneously.
+Applications include electronics, pharmaceuticals, and industrial quality control.
 
----
+## Learn More
 
-##  Learn More
+* Research Report: `Multivariate_Control_Chart__Megha.pdf`
+* Presentation Slides: `Presentation_Multivariate_Control_Charts_Megha.pdf`
 
-- 📄 **[Research Report](./Multivariate_Control_Chart__Megha.pdf)** – Detailed write-up with formulas, examples, and references.
-- 🎥 **[Presentation Slides](./Presentation_Multivariate_Control_Charts_Megha.pdf)** – Compact visual summary for academic or professional sharing.
+## Real-World Relevance
 
----
+Example: In semiconductor production, tracking only the line width or etch depth may seem sufficient. But multivariate control charts can detect when both slightly drift together — preventing expensive defects early.
 
-##  Real-World Relevance
+This makes multivariate quality control essential for modern process monitoring.
 
->  Example: In electronics manufacturing, monitoring only the **line width** or **etch depth** separately may miss early signs of defect.  
-> But with **multivariate control charts**, subtle shifts in multiple dimensions can be caught before costly failures.
+## Contact
 
-This makes MSPC crucial for **predictive quality assurance** in modern systems.
+Author: Megha Chowdhury
+LinkedIn: [https://linkedin.com/in/meghachowdhury](https://linkedin.com/in/meghachowdhury)
+Email: [meghachowdhury.1176@gmail.com](mailto:meghachowdhury.1176@gmail.com)
 
----
+Happy to connect or collaborate on quality control, R programming, or applied statistics!
 
-##  Contact
-
-Feel free to connect or reach out:
-
- [Megha Chowdhury – LinkedIn](https://linkedin.com/in/meghachowdhury)  
- Email: meghachowdhury.1176@gmail.com
-
-Happy to discuss quality control, R programming, or statistical methods!
+```
 
 ---
 
-
+You can paste this into your GitHub `README.md` file, or let me know if you'd like it saved as a downloadable `.md` file.
+```
