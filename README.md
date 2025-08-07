@@ -111,6 +111,5 @@ Email: [meghachowdhury.1176@gmail.com](mailto:meghachowdhury.1176@gmail.com)
 
 Happy to connect or collaborate on quality control, R programming, or applied statistics!
 
-```
 
 
