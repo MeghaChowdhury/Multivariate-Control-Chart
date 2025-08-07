@@ -79,24 +79,6 @@ This project shows how multivariate charts can:
 - MEWMA detected it immediately by crossing the UCL of 9.21
 - Ideal for real-time Phase II monitoring
 
-## How to Use
-
-1. Clone this repository:
-```
-
-git clone [https://github.com/your-username/Multivariate-Control-Chart.git](https://github.com/your-username/Multivariate-Control-Chart.git)
-
-````
-
-2. Open the `.R` script in RStudio
-
-3. Install required packages:
-```r
-install.packages(c("mvtnorm", "qcc", "ellipse", "MASS", "Hotelling", "IAcsSPCR"))
-````
-
-4. Run the script block-by-block to simulate and visualize the charts
-
 ## Key Takeaways
 
 Multivariate control charts are crucial for detecting:
