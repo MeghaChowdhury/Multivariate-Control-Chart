@@ -1,6 +1,3 @@
-Absolutely! Here's a **clean and simple version** of your `README.md` that you can **copy-paste directly** into GitHub. I've removed all icons/emojis and kept formatting professional and easy to read:
-
----
 
 ```markdown
 # Multivariate Control Charts in R
@@ -134,7 +131,4 @@ Happy to connect or collaborate on quality control, R programming, or applied st
 
 ```
 
----
 
-You can paste this into your GitHub `README.md` file, or let me know if you'd like it saved as a downloadable `.md` file.
-```
