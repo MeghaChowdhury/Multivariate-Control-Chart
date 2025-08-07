@@ -1,5 +1,5 @@
 
-```markdown
+
 # Multivariate Control Charts in R
 
 Multivariate quality control refers to statistical techniques for monitoring and controlling processes involving multiple interrelated quality characteristics. These methods are essential when variables are correlated and cannot be effectively assessed using traditional univariate tools.
